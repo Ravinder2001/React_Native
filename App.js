@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import react from "react";
+import { Text, View, StyleSheet } from "react-native";
+import Custom from "./src/screens/CustomComp";
+import FlatListDemo from "./src/screens/FlatList";
+const App = () => {
+  const data = {
+    name: "Ravi",
+    email: "rven@gmail.com",
+    mobile: "0912183",
+  };
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <View>
+    //   <Text style={styles.names}>Hii Ravinder</Text>
+    //   <Text>
+    //     <Custom data={data}></Custom>
+    //   </Text>
+    // </View>
+    <FlatListDemo></FlatListDemo>
   );
-}
-
+};
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  names: {
+    textAlign: "center",
+    margin: 30,
+    fontSize:30
   },
 });
+export default App;
